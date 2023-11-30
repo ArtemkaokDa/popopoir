@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="390dp"
+    android:layout_height="120dp"
+    android:background="@drawable/edit_text_style"
+    >
+
+    <ImageView
+        android:id="@+id/image_category"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/living_blue"
+        />
+
+<TextView
+    android:id="@+id/text_category"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="Гостиная"
+    android:textSize="25dp"
+    android:textColor="@color/blue"
+    android:gravity="center"
+    />
+
+</LinearLayout>
+

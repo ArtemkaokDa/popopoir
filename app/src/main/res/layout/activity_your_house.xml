@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".your_house"
+    android:orientation="vertical"
+    >
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="250dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:text="Твой дом"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:layout_width="150dp"
+                android:layout_height="50dp"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/icon_location"
+                    />
+
+            <TextView
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text="г.Омск, ул.Ленина , д.24"
+                android:textColor="@color/light_gray"
+                android:layout_width="match_parent"
+                android:textSize="14dp"
+                android:layout_height="40dp"/>
+             </LinearLayout>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Комнаты"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:layout_width="150dp"
+                android:layout_height="50dp"/>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="55dp"
+                android:background="@drawable/button_gear"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_room"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/preview"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient">
+
+
+
+        <LinearLayout
+            android:layout_marginTop="130dp"
+            android:layout_marginLeft="139dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@drawable/home"
+            />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="380dp"
+            android:layout_height="155dp"
+            android:background="@drawable/platform_gray"
+            >
+            <TextView
+                android:text="Электронная почта"
+                android:layout_marginLeft="10dp"
+                android:layout_width="150dp"
+                android:layout_height="20dp"/>
+
+           <EditText
+               android:layout_width="360dp"
+               android:layout_marginLeft="10dp"
+               android:layout_height="50dp"
+               android:inputType="textEmailAddress"
+
+               />
+
+            <TextView
+                android:text="Пароль"
+                android:layout_marginLeft="10dp"
+                android:layout_width="150dp"
+                android:layout_height="20dp"/>
+
+            <EditText
+
+                android:layout_width="360dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="50dp"
+                android:inputType="textPassword"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:onClick="nextWindow"
+            android:id="@+id/vhod"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="50dp"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/braun"
+            android:text="Войти"
+            />
+        <Button
+            android:text="Регистрация"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/black"
+            android:layout_width="300dp"
+            android:layout_height="60dp"/>
+
+    </LinearLayout>
+   </LinearLayout>
