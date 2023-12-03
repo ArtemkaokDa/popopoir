@@ -28,22 +28,34 @@
             android:layout_marginTop="50dp"
             android:layout_marginLeft="15dp"
             android:layout_width="380dp"
-            android:layout_height="155dp"
+            android:layout_height="220dp"
             android:background="@drawable/platform_gray"
             >
+            <TextView
+                android:text="Имя пользователя"
+                android:layout_marginLeft="10dp"
+                android:layout_width="150dp"
+                android:layout_height="20dp"/>
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="360dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="50dp"
+                android:inputType="textPersonName"/>
             <TextView
                 android:text="Электронная почта"
                 android:layout_marginLeft="10dp"
                 android:layout_width="150dp"
                 android:layout_height="20dp"/>
 
-           <EditText
-               android:layout_width="360dp"
-               android:layout_marginLeft="10dp"
-               android:layout_height="50dp"
-               android:inputType="textEmailAddress"
+            <EditText
+                android:id="@+id/email_user"
+                android:layout_width="360dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="50dp"
+                android:inputType="textEmailAddress"
 
-               />
+                />
 
             <TextView
                 android:text="Пароль"
@@ -52,7 +64,7 @@
                 android:layout_height="20dp"/>
 
             <EditText
-
+                android:id="@+id/password_user"
                 android:layout_width="360dp"
                 android:layout_marginLeft="10dp"
                 android:layout_height="50dp"
@@ -65,23 +77,24 @@
 
 
         <Button
-
-            android:id="@+id/vhod"
-            android:layout_marginLeft="55dp"
-            android:layout_marginTop="50dp"
+            android:id="@+id/regNewUser"
             android:layout_width="300dp"
             android:layout_height="60dp"
-            android:backgroundTint="@color/braun"
-            android:text="Войти"
-            />
-        <Button
-            android:onClick="nextWindowReg"
-            android:text="Регистрация"
             android:layout_marginLeft="55dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/braun"
+            android:onClick="nextWindow"
+            android:text="Регистрация"
+             />
+
+        <Button
+            android:onClick="nextWindowLogin"
+            android:text="Войти"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/black"
             android:layout_width="300dp"
             android:layout_height="60dp"/>
 
     </LinearLayout>
-   </LinearLayout>
+</LinearLayout>
