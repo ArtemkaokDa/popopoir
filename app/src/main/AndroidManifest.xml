@@ -13,39 +13,35 @@
         android:theme="@style/Theme.Practice"
         tools:targetApi="31">
         <activity
+            android:name=".Reg"
+            android:exported="false" />
+        <activity
             android:name=".userprofile"
-            android:exported="false" />
-        <activity
-            android:name=".hood"
-            android:exported="false" />
-        <activity
-            android:name=".fan"
-            android:exported="false" />
-        <activity
-            android:name=".temperature"
-            android:exported="false" />
-        <activity
-            android:name=".conditioner"
-            android:exported="false" />
-        <activity
-            android:name=".light"
-            android:exported="false" />
-
-        <activity
-            android:name=".AddRoom"
-            android:exported="false" />
-        <activity
-            android:name=".login"
-            android:exported="false" />
-        <activity
-            android:name=".your_house"
             android:exported="false" />
         <activity
             android:name=".AddAdress"
             android:exported="false" />
         <activity
-            android:name=".pincode"
-            android:exported="true" >
+            android:name=".AddRoom"
+            android:exported="false" />
+        <activity
+            android:name=".conditioner"
+            android:exported="false" />
+        <activity
+            android:name=".fan"
+            android:exported="false" />
+        <activity
+            android:name=".hood"
+            android:exported="false" />
+        <activity
+            android:name=".light"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -53,10 +49,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="false">
-
-        </activity>
+            android:name=".pincode"
+            android:exported="false"></activity>
+        <activity
+            android:name=".temperature"
+            android:exported="false" />
+        <activity
+            android:name=".your_house"
+            android:exported="false" />
     </application>
 
 </manifest>
