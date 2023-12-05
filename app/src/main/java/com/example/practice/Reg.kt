@@ -16,7 +16,9 @@ import kotlinx.coroutines.launch
 
 class Reg : AppCompatActivity() {
     @kotlinx.serialization.Serializable
-    data class UserData (val Username: String = "")
+    data class UserData (val Username: String ="", val EmailUser: String = "", val PasswordUser: String = "" )
+    @kotlinx.serialization.Serializable
+    data class Profile (val id: String = "",val username: String ="", val adress: String = "" )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reg)
@@ -38,17 +40,20 @@ class Reg : AppCompatActivity() {
 
         regNewUs.setOnClickListener{
 
-            val us = UserData(Username = userName.text.toString())
+
+           // val us = UserData(userName.text.toString(), emailUser.text.toString(), passwordUser.text.toString())
+            val t =  Toast.makeText(this, "Регистрация успешна", Toast.LENGTH_SHORT)
             lifecycleScope.launch {
-                val user = supabase.gotrue.signUpWith(Email){
+                supabase.gotrue.signUpWith(Email) {
                     email = emailUser.text.toString()
                     password = passwordUser.text.toString()
                 }
+
+                val user = supabase.gotrue.retrieveUserForCurrentSession(updateSession = true)
+                supabase.postgrest["Profile"].insert(Profile(user.id,userName.text.toString(), ""))
+                t.show()
             }
-            lifecycleScope.launch {
-                supabase.postgrest["UsersData"].insert(us)
-            }
-            Toast.makeText(this, "Регистрация успешна", Toast.LENGTH_SHORT).show()
+
 
         }
     }

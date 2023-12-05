@@ -32,12 +32,14 @@
             android:background="@drawable/platform_gray"
             >
             <TextView
+
                 android:text="Электронная почта"
                 android:layout_marginLeft="10dp"
                 android:layout_width="150dp"
                 android:layout_height="20dp"/>
 
            <EditText
+               android:id="@+id/loginIn"
                android:layout_width="360dp"
                android:layout_marginLeft="10dp"
                android:layout_height="50dp"
@@ -52,7 +54,7 @@
                 android:layout_height="20dp"/>
 
             <EditText
-
+                android:id="@+id/passwordIn"
                 android:layout_width="360dp"
                 android:layout_marginLeft="10dp"
                 android:layout_height="50dp"
