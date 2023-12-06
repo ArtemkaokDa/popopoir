@@ -4,6 +4,7 @@ package com.example.practice
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -29,17 +30,18 @@ class pincode : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pincode)
+
+          pa1 = findViewById(R.id.Pa1)
+        pa2 = findViewById(R.id.Pa2)
+        pa3 = findViewById(R.id.Pa3)
+        pa4 = findViewById(R.id.Pa4)
     }
 
     fun OnMyButtonClick(view: View){
 
-        pa1 =  findViewById(R.id.pa1)
-        pa2 = findViewById(R.id.pa2)
-        pa3 = findViewById(R.id.pa3)
-        pa4 = findViewById(R.id.pa4)
-
         val test: Button = view as Button
-        test1 += test.text
+        test1 += test.text.toString()
+        Log.e("!", test1.toString())
         if(test1.length == 1){
             pa1.background = (getDrawable(R.drawable.gray))
         }
